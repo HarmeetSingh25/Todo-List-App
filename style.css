@@ -31,7 +31,7 @@ main {
   padding: 1.5rem 2rem;
   border-radius: 6px;
   width: 30%;
-  height: 6git0%;
+  height: 60%;
   background-color: var(--sec);
 }
 
@@ -68,4 +68,25 @@ main {
   background-color: var(--btn);
   border: none;
   font-size: 1.2rem;
+}
+.Task_container {
+  background-color: #a8bba3;
+  display: flex;
+  /* align-items: center; */
+  padding: 1rem 0.5rem 1rem 0.8rem;
+  border-radius: 10px;
+  flex-direction: column;
+  color: white;
+}
+.task {
+  margin: 1rem 0rem 1rem 1rem;
+  display: flex;
+  gap: 1rem;
+border-bottom: 1px solid grey;
+  /* text-decoration: line-through; */
+}
+.task label {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
 }
