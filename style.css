@@ -1,4 +1,15 @@
+@font-face {
+  font-family: Poppins;
+  src: url(./Poppins-Regular.ttf);
+}
+:root {
+  --pri: #a8bba3;
+  --sec: #f7f4ea;
+  --tri: #ebd9d1;
+  --btn: #b87c4c;
+}
 * {
+  font-family: Poppins;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -7,4 +18,54 @@ html,
 body {
   width: 100%;
   height: 100%;
+}
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pri);
+}
+.Main-container {
+  padding: 1.5rem 2rem;
+  border-radius: 6px;
+  width: 30%;
+  height: 6git0%;
+  background-color: var(--sec);
+}
+
+.Heading h3 {
+  font-family: "Poppins";
+  font-size: 1.8rem;
+  color: #111;
+  font-weight: 600;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+.Heading h3 img {
+  width: 2rem;
+  height: 2rem;
+}
+.input-container {
+  display: flex;
+  border-radius: 50px;
+  margin: 1rem 1.5rem;
+  padding-left: 1rem;
+  background-color: rgba(208, 206, 206, 0.35);
+}
+.input-container input {
+  padding: 1rem 0rem 1rem 0.5rem;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.input-container button {
+  padding: 0.8rem 2.5rem;
+  border-radius: 50px;
+  color: var(--tri);
+  font-weight: 800;
+  background-color: var(--btn);
+  border: none;
+  font-size: 1.2rem;
 }
