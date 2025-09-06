@@ -40,3 +40,45 @@ Task_container.addEventListener("click", (e) => {
   }
 });
 
+function TasKCreater(data) {
+  let task = document.createElement("div");
+  task.className = "task";
+
+  let label = document.createElement("label");
+
+  let inputCheckBox = document.createElement("input");
+  inputCheckBox.type = "checkbox";
+
+  label.appendChild(inputCheckBox);
+  task.appendChild(label);
+
+  let p = document.createElement("p");
+  p.textContent = data;
+
+  let Delete = document.createElement("span");
+  Delete.innerHTML = `<i class="ri-close-line"></i>`;
+  task.appendChild(Delete);
+  label.appendChild(p);
+
+  Task_container.append(task);
+
+  Task_container.addEventListener("click", (e) => {
+    if (e.target === inputCheckBox) {
+      if (inputCheckBox.checked) {
+        e.target.closest(".task label").style.textDecoration = `line-through`;
+        SaveData();
+      } else {
+        e.target.closest(".task label").style.textDecoration = `none`;
+        SaveData();
+      }
+    }
+    if (e.target.closest(".ri-close-line")) {
+      console.log("Delete");
+      console.log(e.target.closest(".task"));
+      e.target.closest(".task").remove();
+      SaveData();
+    }
+  });
+  SaveData();
+}
+
